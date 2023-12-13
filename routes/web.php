@@ -38,3 +38,7 @@ Route::get('/manageCustomers', [FootFitsController::class, 'manageCustomers'])->
 Route::get('/manageOrders', [FootFitsController::class, 'manageOrders'])->name('manageOrders');
 Route::get('/manageProductList', [FootFitsController::class, 'manageProductList'])->name('manageProductList');
 
+Route::post('/productDetails/add_cart/{id}', [CartController::class, 'AddCart'])->name('add.cart');
+Route::get('/productDetails/delete_cart/{id}', [CartController::class, 'DeleteCart']);
+Route::get('/productDetails/edit_cart/{id}', [CartController::class, 'EditCart']);
+Route::post('/productDetails/update_cart/{id}', [CartController::class, 'UpdateCart']);
