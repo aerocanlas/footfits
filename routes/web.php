@@ -42,6 +42,9 @@ Route::middleware([
     })->name('dashboard');
 });
 
+Route::get('/bestseller', [FootFitsController::class, 'bestSeller'])->name('bestSeller');
+Route::get('/checkout', [FootFitsController::class, 'checkout'])->name('checkout');
+
 Route::get('/admin', [FootFitsController::class, 'admin'])->name('admin');
 Route::get('/adminLogin', [FootFitsController::class, 'adminLogin'])->name('adminLogin');
 Route::get('/adminRegister', [FootFitsController::class, 'adminRegister'])->name('adminRegister');
